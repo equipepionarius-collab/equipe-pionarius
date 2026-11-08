@@ -1,0 +1,22 @@
+{
+  "name": "<nom-du-marketplace>",
+  "owner": {
+    "name": "<Nom affiché>"
+  },
+  "metadata": {
+    "description": "<Ce que contient ce dépôt de skills>",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "<nom-du-plugin>",
+      "description": "<Les skills inclus>",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/<skill-1>",
+        "./skills/<skill-2>"
+      ]
+    }
+  ]
+}
