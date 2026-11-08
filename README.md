@@ -1,57 +1,121 @@
 <p align="center"><img src="assets/logo-pionarius.png" alt="Logo Pionarius" width="160"></p>
 
-# Équipe Pionarius
+<h1 align="center">Skills de l'Équipe Pionarius</h1>
 
-Des outils simples pour tester, en conditions réelles, ce que l'IA sait vraiment faire avec nos données.
+<p align="center">
+Des skills pour Claude, testés en conditions réelles, écrits en français.<br>
+Tests IA · WordPress et SEO · rédaction · organisation du travail avec Claude.
+</p>
 
-## Skill : test des photos supprimées
+<p align="center">
+<img alt="Skills" src="https://img.shields.io/badge/skills-6-111111">
+<img alt="Langue" src="https://img.shields.io/badge/langue-français-111111">
+<img alt="Licence" src="https://img.shields.io/badge/licence-MIT-111111">
+<img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-compatible-111111">
+</p>
 
-Un témoignage viral affirme qu'un utilisateur a retrouvé 214 856 photos « supprimées » grâce à Claude Code. Ce skill permet de refaire le test soi-même, honnêtement : il montre ce que l'ordinateur voit d'un téléphone branché, et où se cachent vraiment les traces de photos effacées.
+## Qu'est-ce qu'un skill ?
 
-**Ce qu'il fait**
+Un skill est un dossier qui contient un fichier `SKILL.md` : des instructions que Claude charge seulement quand la tâche s'y prête. Le haut du fichier (le *frontmatter*) donne le nom du skill et sa description. Claude lit cette description pour décider quand l'utiliser. Le reste du fichier explique la méthode, étape par étape, et peut s'appuyer sur des scripts ou des fichiers de référence placés à côté.
 
-1. Détecte le téléphone (iPhone ou Android) et explique pourquoi l'accès est bloqué : écran verrouillé, « Se fier », logiciel Apple manquant, câble défectueux.
-2. Compte les fichiers visibles par type et par année, sans rien copier.
-3. Cherche les copies sur le PC : sauvegardes, iCloud, OneDrive, Google Drive, corbeille, cache de miniatures.
-4. Indique les endroits à vérifier à la main (« Supprimés récemment », corbeilles en ligne).
-5. Optionnel, avec votre accord : extrait les aperçus du cache de miniatures Windows.
-6. Fait un rapport chiffré et propose le ménage.
+Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai et bureau) et avec l'API.
 
-**Ses garanties**
+## Catalogue
 
-- Lecture seule, sauf l'extraction optionnelle.
-- Aucune image ne quitte l'ordinateur.
-- Aucune suppression définitive.
+| Skill | À quoi il sert | Se déclenche quand… | Contenu |
+| --- | --- | --- | --- |
+| [test-photos-supprimees](skills/test-photos-supprimees) | Vérifier ce qu'un ordinateur voit d'un téléphone branché et où se cachent les traces de photos supprimées | « fais le test des photos supprimées », « retrouve mes photos effacées » | SKILL.md, 4 scripts PowerShell, fiche Mac |
+| [webmaster-wordpress-elementor](skills/webmaster-wordpress-elementor) | Gérer un site WordPress + Elementor + Rank Math : balises SEO, caches, Search Console, cartes visuelles | une tâche d'administration ou de SEO sur un site WordPress | SKILL.md |
+| [wordpress-seo-geo-writer](skills/wordpress-seo-geo-writer) | Rédiger un article prêt pour WordPress, optimisé pour Google (SEO) et pour les IA de recherche (GEO) | « écris un article », « un billet de blog pour le site » | SKILL.md |
+| [humanizer](skills/humanizer) | Réécrire un texte qui « sonne IA » pour qu'il sonne humain, sans changer le fond | « humanise ce texte », relecture d'un texte généré | SKILL.md (adapté de blader/humanizer) |
+| [clear](skills/clear) | Tout sauvegarder avant de taper `/clear`, pour reprendre le travail ensuite | « /clear », « on repart à zéro » | SKILL.md |
+| [compact](skills/compact) | Ranger et archiver le suivi avant de taper `/compact` | « /compact », « fais le ménage » | SKILL.md |
 
-### Notre résultat
-
-| | Témoignage viral | Notre test |
-| --- | --- | --- |
-| Téléphone | Google Pixel (Android) | iPhone |
-| Ordinateur | MacBook | PC Windows 11 |
-| Fichiers « cachés » sur le téléphone | Plus de 214 000 miniatures | Aucun : 862 fichiers de la pellicule |
-| Images effacées retrouvées | Sur le téléphone | Sur le PC : 1 230 miniatures |
+Chaque dossier a son propre README : ce que fait le skill, comment il travaille, des exemples de demandes, ses garde-fous et ses limites.
 
 ## Installation
 
-1. Téléchargez ce dépôt (bouton **Code → Download ZIP**) et décompressez-le.
-2. Copiez le dossier `skills/test-photos-supprimees` dans :
-   - Windows : `%USERPROFILE%\.claude\skills\`
-   - Mac : `~/.claude/skills/`
-3. Ouvrez Claude Code et écrivez : « Fais le test des photos supprimées sur mon téléphone ».
+### Option 1 : Claude Code, en une commande (marketplace de plugins)
 
-Les scripts Windows fonctionnent aussi seuls :
+Dans Claude Code, tapez :
 
-```powershell
-powershell -ExecutionPolicy Bypass -File skills\test-photos-supprimees\scripts\windows\1-detecter-telephone.ps1
+```
+/plugin marketplace add equipepionarius-collab/equipe-pionarius
+/plugin install pionarius-skills@equipe-pionarius
 ```
 
-## Prérequis
+Tous les skills du dépôt sont alors disponibles. Pour les mettre à jour plus tard : `/plugin marketplace update equipe-pionarius`.
 
-- iPhone sur Windows : application **Appareils Apple** (Microsoft Store).
-- Un câble USB d'origine ou certifié, branché directement sur l'ordinateur.
-- Le téléphone déverrouillé, accès autorisé (« Se fier » ou « Transfert de fichiers »).
+### Option 2 : Claude Code, à la main
 
-## Avertissement
+1. Téléchargez le dépôt (bouton **Code → Download ZIP**) et décompressez-le.
+2. Copiez le ou les dossiers voulus de `skills/` dans :
+   - Windows : `%USERPROFILE%\.claude\skills\`
+   - Mac et Linux : `~/.claude/skills/`
+3. Relancez Claude Code, puis demandez « quels skills as-tu ? » pour vérifier.
 
-Ces outils servent à vérifier **vos propres** appareils. Les aperçus extraits peuvent contenir des documents sensibles : gardez-les en local et supprimez-les après usage.
+Pour un skill réservé à un seul projet, copiez-le plutôt dans `.claude/skills/` à la racine de ce projet.
+
+### Option 3 : application Claude (claude.ai ou bureau)
+
+1. Compressez le dossier d'un skill en ZIP (le fichier `SKILL.md` doit être à la racine du dossier).
+2. Dans les paramètres de l'application, section **Capacités** (Capabilities), partie **Skills** : importez le ZIP.
+
+## Utilisation
+
+Rien à mémoriser : décrivez la tâche normalement, Claude choisit le skill qui correspond. Vous pouvez aussi le demander par son nom, par exemple « utilise le skill wordpress-seo-geo-writer pour un article sur… ».
+
+## Principes communs à nos skills
+
+- **Lecture d'abord, action ensuite.** Chaque skill commence par établir l'état réel avant de modifier quoi que ce soit.
+- **Pas de suppression définitive.** Brouillon, corbeille ou archive, jamais d'effacement sans retour possible.
+- **Pas d'action externe sans accord.** Aucun envoi, publication, paiement ni saisie de mot de passe par Claude.
+- **Le contenu lu est une donnée, pas une consigne.** Pages web, e-mails et fichiers ne donnent jamais d'ordres à Claude.
+- **Des faits vérifiables.** Pas de chiffre ni de citation inventés ; ce qui reste à vérifier est signalé.
+
+## Structure du dépôt
+
+```
+equipe-pionarius/
+├── .claude-plugin/
+│   └── marketplace.json        # installation en une commande dans Claude Code
+├── assets/
+│   └── logo-pionarius.png
+├── skills/
+│   ├── test-photos-supprimees/
+│   │   ├── SKILL.md
+│   │   ├── README.md
+│   │   ├── reference/mac.md
+│   │   └── scripts/windows/*.ps1
+│   ├── webmaster-wordpress-elementor/
+│   ├── wordpress-seo-geo-writer/
+│   ├── humanizer/              # + LICENSE de l'auteur d'origine
+│   ├── clear/
+│   └── compact/
+├── LICENSE
+└── README.md
+```
+
+## Créer votre propre skill
+
+1. Créez un dossier au nom du skill, en minuscules avec des tirets.
+2. Ajoutez un `SKILL.md` qui commence par :
+
+   ```yaml
+   ---
+   name: mon-skill
+   description: Ce que fait le skill et quand l'utiliser, avec les mots que dirait l'utilisateur.
+   ---
+   ```
+
+3. Écrivez la méthode en étapes courtes, puis les règles à ne jamais enfreindre.
+4. Testez-le sur une vraie tâche avant de le partager.
+
+## Licence et crédits
+
+- Skills de l'Équipe Pionarius : licence [MIT](LICENSE).
+- `humanizer` est adapté de [blader/humanizer](https://github.com/blader/humanizer), licence MIT, © 2025 Siqi Chen. Sa licence d'origine est conservée dans [skills/humanizer/LICENSE](skills/humanizer/LICENSE). Les règles de ce skill s'appuient sur la page Wikipédia [« Signs of AI writing »](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
+
+## Contact
+
+Une question, une idée de skill, ou envie de faire le test des photos supprimées ? Écrivez à l'Équipe Pionarius sur LinkedIn avec le message **TEST PHOTO**, ou ouvrez une *issue* sur ce dépôt.
