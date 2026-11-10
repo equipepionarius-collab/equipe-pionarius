@@ -4,27 +4,43 @@
     "name": "Équipe Pionarius"
   },
   "metadata": {
-    "description": "Skills de l'Équipe Pionarius pour Claude : tests IA, sécurité des skills, WordPress, SEO et GEO, réseaux sociaux, rédaction, organisation du travail.",
-    "version": "1.2.0"
+    "description": "Skills et agents de l'Équipe Pionarius pour Claude : tests IA, sécurité des skills, SEO, GEO et netlinking, WordPress, réseaux sociaux, méthode de développement, organisation du travail.",
+    "version": "1.3.0"
   },
   "plugins": [
     {
       "name": "pionarius-skills",
-      "description": "Tous les skills de l'Équipe Pionarius, en français : chasseur de skills, sécurité, audit SEO et GEO, WordPress, posts réseaux avec GIF, publication GitHub, humanizer, clear, compact, test des photos supprimées.",
+      "description": "Tous les skills et agents de l'Équipe Pionarius, en français, avec garde-fous : chasseur de skills, sécurité, audit SEO/GEO, netlinking, WordPress, posts réseaux avec GIF, code minimal, méthode de développeur senior, carte du code, choix du modèle d'IA, publication GitHub, et 9 agents spécialisés.",
       "source": "./",
       "strict": false,
       "skills": [
         "./skills/audit-seo-geo",
+        "./skills/carte-du-code",
         "./skills/chasseur-de-skills",
+        "./skills/choix-modele-ia",
         "./skills/clear",
+        "./skills/code-minimal",
         "./skills/compact",
         "./skills/humanizer",
+        "./skills/methode-dev-senior",
+        "./skills/netlinking-backlinks",
         "./skills/post-reseaux-gif",
         "./skills/publier-skills-github",
         "./skills/test-photos-supprimees",
         "./skills/verif-skill-securite",
         "./skills/webmaster-wordpress-elementor",
         "./skills/wordpress-seo-geo-writer"
+      ],
+      "agents": [
+        "./agents/pionarius-seo.md",
+        "./agents/pionarius-geo-citations-ia.md",
+        "./agents/pionarius-wordpress.md",
+        "./agents/pionarius-contenu-reseaux.md",
+        "./agents/pionarius-linkedin.md",
+        "./agents/pionarius-tracking-rgpd.md",
+        "./agents/pionarius-propositions-commerciales.md",
+        "./agents/pionarius-verificateur.md",
+        "./agents/pionarius-prompt-engineer.md"
       ]
     }
   ]
