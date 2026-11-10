@@ -1,0 +1,27 @@
+{
+  "bandeau": "TEST RÉEL · IA & DONNÉES PERSONNELLES",
+  "theme": { "fond": "#0F172A", "carte": "#1E293B", "texte": "#FFFFFF", "secondaire": "#94A3B8", "accent": "#3B82F6" },
+  "duree_secondes": 4.5,
+  "diapos": [
+    { "type": "accroche", "grand": "214 856", "titre": "photos « supprimées » retrouvées grâce à l'IA ?", "texte": "Un témoignage viral l'affirme.\nJ'ai refait le test sur mon propre iPhone.", "bas": "Voici ce que j'ai vraiment trouvé  →", "duree_secondes": 3.2 },
+    { "type": "etapes", "titre": "Mon test, en conditions réelles", "sous_titre": "iPhone + PC Windows 11 + Claude Code", "items": [
+      { "texte": "Branchement : stockage vide", "ok": false },
+      { "texte": "Aucun logiciel Apple sur le PC", "ok": false },
+      { "texte": "Apple Devices installé, mais le câble coupe", "ok": false },
+      { "texte": "Nouveau câble : accès à la pellicule", "ok": true } ], "duree_secondes": 3.2 },
+    { "type": "chiffre", "titre": "Ce que l'iPhone a montré", "nombre": 862, "legende": "fichiers visibles (la pellicule actuelle)", "nombre2": "0", "legende2": "fichier supprimé retrouvé", "note": "Par câble, Windows ne voit que la pellicule." },
+    { "type": "barres", "titre": "90 % des fichiers datent de 2026", "sous_titre": "Avant 2025, presque rien : supprimé… ou seulement dans iCloud.", "etiquettes": ["'15","'16","'17","'18","'19","'20","'21","'22","'23","'24","'25","'26"], "valeurs": [1,0,0,0,0,5,1,5,7,6,60,777] },
+    { "type": "chiffre", "titre": "La vraie surprise : le PC", "nombre": 1230, "legende": "miniatures retrouvées dans le cache de Windows", "note": "Des aperçus d'images supprimées depuis. Analyse faite en local : rien n'a quitté l'ordinateur." },
+    { "type": "comparaison", "titre": "Qui garde quoi ?", "colonne_a": "Android / Google", "colonne_b": "iPhone / Apple", "lignes": [
+      { "critere": "Accès par câble", "a": "Une grande partie du stockage", "b": "La pellicule seulement" },
+      { "critere": "Miniatures", "a": "Visibles (selon le témoignage)", "b": "Invisibles depuis le PC" },
+      { "critere": "Corbeille photos", "a": "Google Photos : 30 à 60 jours", "b": "« Supprimés récemment » : 30 j" } ],
+      "encart": "Et votre ordinateur garde des aperçus de ce que vous affichez.", "duree_secondes": 6 },
+    { "type": "liste", "titre": "À qui faire confiance ?", "sous_titre": "Ni à Apple, ni à Google par défaut : à vos réglages.", "items": [
+      "Videz « Supprimés récemment » après avoir effacé un document sensible.",
+      "Videz le cache de miniatures : Nettoyage de disque → Miniatures.",
+      "Ne photographiez jamais passeport ou codes crypto : coffre-fort chiffré." ] },
+    { "type": "analyse", "surtitre": "Mon analyse", "titre": "L'IA n'a rien ressuscité.", "texte": "Elle sait où chercher, et elle va plus vite que nous.", "fort": "Le vrai sujet, ce sont les traces que nos appareils gardent sans nous le dire.", "pastilles": ["Test réel", "Analyse des données", "Conseils concrets"] },
+    { "type": "cta", "titre": "Vous voulez faire le test ?", "etape1": "1. Envoyez-moi une demande de connexion", "etape2": "2. Écrivez-moi en message :", "mot_cle": "TEST PHOTO", "texte": "Je vous envoie le guide pas à pas : quoi brancher, quoi installer, quoi vérifier.", "duree_secondes": 6.5 }
+  ]
+}
