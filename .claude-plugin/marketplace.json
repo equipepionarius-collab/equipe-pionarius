@@ -4,22 +4,27 @@
     "name": "Équipe Pionarius"
   },
   "metadata": {
-    "description": "Skills de l'Équipe Pionarius pour Claude : tests IA, WordPress et SEO, rédaction, organisation du travail.",
-    "version": "1.0.0"
+    "description": "Skills de l'Équipe Pionarius pour Claude : tests IA, sécurité des skills, WordPress, SEO et GEO, réseaux sociaux, rédaction, organisation du travail.",
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "pionarius-skills",
-      "description": "Les 6 skills de l'Équipe Pionarius : test-photos-supprimees, webmaster-wordpress-elementor, wordpress-seo-geo-writer, humanizer, clear, compact.",
+      "description": "Tous les skills de l'Équipe Pionarius, en français : chasseur de skills, sécurité, audit SEO et GEO, WordPress, posts réseaux avec GIF, publication GitHub, humanizer, clear, compact, test des photos supprimées.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/test-photos-supprimees",
-        "./skills/webmaster-wordpress-elementor",
-        "./skills/wordpress-seo-geo-writer",
-        "./skills/humanizer",
+        "./skills/audit-seo-geo",
+        "./skills/chasseur-de-skills",
         "./skills/clear",
-        "./skills/compact"
+        "./skills/compact",
+        "./skills/humanizer",
+        "./skills/post-reseaux-gif",
+        "./skills/publier-skills-github",
+        "./skills/test-photos-supprimees",
+        "./skills/verif-skill-securite",
+        "./skills/webmaster-wordpress-elementor",
+        "./skills/wordpress-seo-geo-writer"
       ]
     }
   ]
