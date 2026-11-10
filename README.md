@@ -8,7 +8,7 @@ Tests IA · sécurité · WordPress, SEO et GEO · rédaction · organisation du
 </p>
 
 <p align="center">
-<img alt="Skills" src="https://img.shields.io/badge/skills-8-111111">
+<img alt="Skills" src="https://img.shields.io/badge/skills-11-111111">
 <img alt="Langue" src="https://img.shields.io/badge/langue-français-111111">
 <img alt="Licence" src="https://img.shields.io/badge/licence-MIT-111111">
 <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-compatible-111111">
@@ -24,6 +24,9 @@ Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai e
 
 | Skill | À quoi il sert | Se déclenche quand… | Contenu |
 | --- | --- | --- | --- |
+| [chasseur-de-skills](skills/chasseur-de-skills) | Trouver sur GitHub le meilleur skill pour un besoin, le scanner, l'améliorer en français, le tester et l'installer | « trouve-moi un skill pour… », « installe ce skill GitHub » | SKILL.md, scanner de sécurité PowerShell, critères en `grep` |
+| [publier-skills-github](skills/publier-skills-github) | Publier ses skills dans un dépôt GitHub documenté et installable par tous | « mets mes skills sur GitHub » | SKILL.md, script de contrôle et de ZIP, modèles |
+| [post-reseaux-gif](skills/post-reseaux-gif) | Transformer un test ou des chiffres en post LinkedIn et Instagram avec carrousel GIF animé et mot-clé | « fais un post LinkedIn avec un GIF » | SKILL.md, générateur de GIF, exemple |
 | [test-photos-supprimees](skills/test-photos-supprimees) | Vérifier ce qu'un ordinateur voit d'un téléphone branché et où se cachent les traces de photos supprimées | « fais le test des photos supprimées », « retrouve mes photos effacées » | SKILL.md, 4 scripts PowerShell, fiche Mac |
 | [verif-skill-securite](skills/verif-skill-securite) | Contrôler un skill, un plugin ou un serveur MCP externe avant de l'installer, avec un verdict clair | « vérifie ce skill », « ce plugin est-il sûr ? » | SKILL.md |
 | [audit-seo-geo](skills/audit-seo-geo) | Auditer un site pour Google et pour les IA de recherche : score /100, 3 actions prioritaires, correctifs prêts à coller | « fais un audit SEO de mon site », « pourquoi ChatGPT ne me cite pas ? » | SKILL.md |
@@ -60,8 +63,11 @@ Pour un skill réservé à un seul projet, copiez-le plutôt dans `.claude/skill
 
 ### Option 3 : application Claude (claude.ai ou bureau)
 
-1. Compressez le dossier d'un skill en ZIP (le fichier `SKILL.md` doit être à la racine du dossier).
+1. Ouvrez le dossier [`dist/`](dist) et téléchargez le ZIP du skill voulu (bouton de téléchargement en haut à droite du fichier). Chaque ZIP contient le dossier du skill, `SKILL.md` compris.
 2. Dans les paramètres de l'application, section **Capacités** (Capabilities), partie **Skills** : importez le ZIP.
+3. Activez le skill, puis décrivez votre tâche normalement.
+
+Conseil : commencez par **chasseur-de-skills**. Il cherche et installe ensuite pour vous, de façon sûre, les autres skills dont vous avez besoin.
 
 ## Utilisation
 
@@ -83,7 +89,17 @@ equipe-pionarius/
 │   └── marketplace.json        # installation en une commande dans Claude Code
 ├── assets/
 │   └── logo-pionarius.png
+├── dist/                       # un ZIP par skill, pour l'application Claude
 ├── skills/
+│   ├── chasseur-de-skills/
+│   │   ├── scripts/scanner-skill.ps1
+│   │   └── reference/criteres-securite.md
+│   ├── publier-skills-github/
+│   │   ├── scripts/construire-depot.ps1
+│   │   └── templates/
+│   ├── post-reseaux-gif/
+│   │   ├── scripts/carrousel-gif.ps1, carrousel.cs
+│   │   └── exemples/test-photos.json, test-photos.gif
 │   ├── test-photos-supprimees/
 │   │   ├── SKILL.md
 │   │   ├── README.md
