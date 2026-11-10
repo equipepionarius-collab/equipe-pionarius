@@ -8,7 +8,7 @@ Tests IA · sécurité · WordPress, SEO et GEO · rédaction · organisation du
 </p>
 
 <p align="center">
-<img alt="Skills" src="https://img.shields.io/badge/skills-16-111111"> <img alt="Agents" src="https://img.shields.io/badge/agents-9-111111">
+<img alt="Skills" src="https://img.shields.io/badge/skills-17-111111"> <img alt="Agents" src="https://img.shields.io/badge/agents-9-111111">
 <img alt="Langue" src="https://img.shields.io/badge/langue-français-111111">
 <img alt="Licence" src="https://img.shields.io/badge/licence-MIT-111111">
 <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-compatible-111111">
@@ -26,6 +26,7 @@ Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai e
 | --- | --- | --- | --- |
 | [chasseur-de-skills](skills/chasseur-de-skills) | Trouver sur GitHub le meilleur skill pour un besoin, le scanner, l'améliorer en français, le tester et l'installer | « trouve-moi un skill pour… », « installe ce skill GitHub » | SKILL.md, scanner de sécurité PowerShell, critères en `grep` |
 | [publier-skills-github](skills/publier-skills-github) | Publier ses skills dans un dépôt GitHub documenté et installable par tous | « mets mes skills sur GitHub » | SKILL.md, script de contrôle et de ZIP, modèles |
+| [seo-pilote-quotidien](skills/seo-pilote-quotidien) | Pilote SEO et GEO quotidien d'un site dans un dépôt : santé chaque jour, pages 8 à 20 chaque semaine, contenus chaque mois, mesure à J+14, propositions uniquement | « lance le pilote SEO », « SEO autopilot » | SKILL.md, contrôles curl testés |
 | [netlinking-backlinks](skills/netlinking-backlinks) | Backlinks conformes à Google : audit, concurrents, prospection (getreach en lecture seule), outreach, `rel="sponsored"` | « backlinks », « netlinking », « getreach » | SKILL.md |
 | [code-minimal](skills/code-minimal) | La plus petite modification qui résout tout, sans usine à gaz (version sûre de ponytail) | « fais simple », « version minimale » | SKILL.md |
 | [methode-dev-senior](skills/methode-dev-senior) | Cadrer, spécifier, découper, déboguer, relire, livrer (d'après les agent-skills d'Addy Osmani) | « par où commencer », « ça ne marche pas » | SKILL.md |
@@ -53,6 +54,9 @@ Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai e
 | Plugin complet ponytail | Seul le texte du skill est repris | Hooks, journal de session et webhook non nécessaires |
 | graphify | Remplacé par `carte-du-code` | Paquet à installer, alertes de sécurité ouvertes |
 | Heretic | Écarté | Outil de retrait des protections d'IA, pas un skill |
+| seo-autopilot (Illyism) | Réécrit en `seo-pilote-quotidien` | Fusion automatique en production, instructions distantes à suivre, liens payants, pas de licence |
+| Skill linkdr (Illyism) | Écarté | Tunnel d'achat de backlinks, contraire aux règles de Google |
+| block-ai-scrapers (Illyism) | Écarté | Bloque les robots des IA de recherche, à l'opposé du GEO |
 | Connecteur getreach « compte » | Déconseillé | Peut commander et payer ; seul le mode lecture est utilisé |
 
 Chaque dossier a son propre README : ce que fait le skill, comment il travaille, des exemples de demandes, ses garde-fous et ses limites.
@@ -155,6 +159,7 @@ equipe-pionarius/
 - Skills de l'Équipe Pionarius : licence [MIT](LICENSE).
 - `humanizer` est adapté de [blader/humanizer](https://github.com/blader/humanizer), licence MIT, © 2025 Siqi Chen. Sa licence d'origine est conservée dans [skills/humanizer/LICENSE](skills/humanizer/LICENSE). Les règles de ce skill s'appuient sur la page Wikipédia [« Signs of AI writing »](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
 - `audit-seo-geo` s'inspire de [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo), [Auriti-Labs/geo-optimizer-skill](https://github.com/Auriti-Labs/geo-optimizer-skill) et [every-app/open-seo](https://github.com/every-app/open-seo) (MIT).
+- `seo-pilote-quotidien` s'inspire de la méthode d'[Illyism/seo-skills](https://github.com/Illyism/seo-skills) (réécrit sans copie) et de [leopard627/fire-your-seo-agency](https://github.com/leopard627/fire-your-seo-agency) (MIT, © 2026 leopard627, licence conservée dans le dossier).
 - `code-minimal` est adapté de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) (MIT, © 2026 DietrichGebert, licence conservée dans le dossier).
 - `methode-dev-senior` est adapté de [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) (MIT, © 2025 Addy Osmani, licence conservée dans le dossier).
 - `carte-du-code` s'inspire de [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) (Apache-2.0) ; `choix-modele-ia` de l'analyse de [cheaper-inference/OmniRoute](https://github.com/cheaper-inference/OmniRoute) (MIT). Aucun code repris.
