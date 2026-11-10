@@ -14,6 +14,7 @@
       "source": "./",
       "strict": false,
       "skills": [
+        "./skills/agence-seo",
         "./skills/audit-seo-geo",
         "./skills/carte-du-code",
         "./skills/chasseur-de-skills",
