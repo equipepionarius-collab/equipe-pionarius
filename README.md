@@ -8,7 +8,7 @@ Tests IA · sécurité · WordPress, SEO et GEO · rédaction · organisation du
 </p>
 
 <p align="center">
-<img alt="Skills" src="https://img.shields.io/badge/skills-11-111111">
+<img alt="Skills" src="https://img.shields.io/badge/skills-16-111111"> <img alt="Agents" src="https://img.shields.io/badge/agents-9-111111">
 <img alt="Langue" src="https://img.shields.io/badge/langue-français-111111">
 <img alt="Licence" src="https://img.shields.io/badge/licence-MIT-111111">
 <img alt="Claude Code" src="https://img.shields.io/badge/Claude%20Code-compatible-111111">
@@ -26,6 +26,11 @@ Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai e
 | --- | --- | --- | --- |
 | [chasseur-de-skills](skills/chasseur-de-skills) | Trouver sur GitHub le meilleur skill pour un besoin, le scanner, l'améliorer en français, le tester et l'installer | « trouve-moi un skill pour… », « installe ce skill GitHub » | SKILL.md, scanner de sécurité PowerShell, critères en `grep` |
 | [publier-skills-github](skills/publier-skills-github) | Publier ses skills dans un dépôt GitHub documenté et installable par tous | « mets mes skills sur GitHub » | SKILL.md, script de contrôle et de ZIP, modèles |
+| [netlinking-backlinks](skills/netlinking-backlinks) | Backlinks conformes à Google : audit, concurrents, prospection (getreach en lecture seule), outreach, `rel="sponsored"` | « backlinks », « netlinking », « getreach » | SKILL.md |
+| [code-minimal](skills/code-minimal) | La plus petite modification qui résout tout, sans usine à gaz (version sûre de ponytail) | « fais simple », « version minimale » | SKILL.md |
+| [methode-dev-senior](skills/methode-dev-senior) | Cadrer, spécifier, découper, déboguer, relire, livrer (d'après les agent-skills d'Addy Osmani) | « par où commencer », « ça ne marche pas » | SKILL.md |
+| [carte-du-code](skills/carte-du-code) | Carte d'un projet sans rien installer (idée de graphify, sans ses risques) | « explique-moi ce projet » | SKILL.md |
+| [choix-modele-ia](skills/choix-modele-ia) | Bon modèle, bon effort, coût réel, vérification d'une passerelle comme OmniRoute | « quel modèle prendre », « OmniRoute » | SKILL.md |
 | [post-reseaux-gif](skills/post-reseaux-gif) | Transformer un test ou des chiffres en post LinkedIn et Instagram avec carrousel GIF animé et mot-clé | « fais un post LinkedIn avec un GIF » | SKILL.md, générateur de GIF, exemple |
 | [test-photos-supprimees](skills/test-photos-supprimees) | Vérifier ce qu'un ordinateur voit d'un téléphone branché et où se cachent les traces de photos supprimées | « fais le test des photos supprimées », « retrouve mes photos effacées » | SKILL.md, 4 scripts PowerShell, fiche Mac |
 | [verif-skill-securite](skills/verif-skill-securite) | Contrôler un skill, un plugin ou un serveur MCP externe avant de l'installer, avec un verdict clair | « vérifie ce skill », « ce plugin est-il sûr ? » | SKILL.md |
@@ -35,6 +40,20 @@ Les skills fonctionnent dans Claude Code, dans l'application Claude (claude.ai e
 | [humanizer](skills/humanizer) | Réécrire un texte qui « sonne IA » pour qu'il sonne humain, sans changer le fond | « humanise ce texte », relecture d'un texte généré | SKILL.md (adapté de blader/humanizer) |
 | [clear](skills/clear) | Tout sauvegarder avant de taper `/clear`, pour reprendre le travail ensuite | « /clear », « on repart à zéro » | SKILL.md |
 | [compact](skills/compact) | Ranger et archiver le suivi avant de taper `/compact` | « /compact », « fais le ménage » | SKILL.md |
+
+### Agents (Claude Code)
+
+9 sous-agents spécialisés dans [`agents/`](agents) : `pionarius-seo`, `pionarius-geo-citations-ia`, `pionarius-wordpress`, `pionarius-contenu-reseaux`, `pionarius-linkedin`, `pionarius-tracking-rgpd`, `pionarius-propositions-commerciales`, `pionarius-verificateur`, `pionarius-prompt-engineer`. Réécrits en français à partir de « The Agency » ([msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents), MIT), avec des outils limités au strict nécessaire.
+
+### Ce que nous avons écarté, et pourquoi
+
+| Projet vu en vidéo | Décision | Raison |
+| --- | --- | --- |
+| OmniRoute | Pas installé ; remplacé par `choix-modele-ia` | Faille critique récente, interception TLS, risque de suspension de comptes |
+| Plugin complet ponytail | Seul le texte du skill est repris | Hooks, journal de session et webhook non nécessaires |
+| graphify | Remplacé par `carte-du-code` | Paquet à installer, alertes de sécurité ouvertes |
+| Heretic | Écarté | Outil de retrait des protections d'IA, pas un skill |
+| Connecteur getreach « compte » | Déconseillé | Peut commander et payer ; seul le mode lecture est utilisé |
 
 Chaque dossier a son propre README : ce que fait le skill, comment il travaille, des exemples de demandes, ses garde-fous et ses limites.
 
@@ -136,6 +155,10 @@ equipe-pionarius/
 - Skills de l'Équipe Pionarius : licence [MIT](LICENSE).
 - `humanizer` est adapté de [blader/humanizer](https://github.com/blader/humanizer), licence MIT, © 2025 Siqi Chen. Sa licence d'origine est conservée dans [skills/humanizer/LICENSE](skills/humanizer/LICENSE). Les règles de ce skill s'appuient sur la page Wikipédia [« Signs of AI writing »](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
 - `audit-seo-geo` s'inspire de [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo), [Auriti-Labs/geo-optimizer-skill](https://github.com/Auriti-Labs/geo-optimizer-skill) et [every-app/open-seo](https://github.com/every-app/open-seo) (MIT).
+- `code-minimal` est adapté de [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) (MIT, © 2026 DietrichGebert, licence conservée dans le dossier).
+- `methode-dev-senior` est adapté de [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) (MIT, © 2025 Addy Osmani, licence conservée dans le dossier).
+- `carte-du-code` s'inspire de [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) (Apache-2.0) ; `choix-modele-ia` de l'analyse de [cheaper-inference/OmniRoute](https://github.com/cheaper-inference/OmniRoute) (MIT). Aucun code repris.
+- Les agents sont adaptés de [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (MIT, © 2025 AgentLand Contributors, licence dans `agents/LICENSE-agency-agents`).
 - `verif-skill-securite` s'inspire des catégories d'attaque de [NVIDIA/SkillSpector](https://github.com/NVIDIA/skillspector) (Apache-2.0).
 
 ## Contact
